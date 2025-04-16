@@ -1,4 +1,4 @@
-import { storyblokEditable } from "@storyblok/react/rsc";
+import { storyblokEditable, renderRichText } from "@storyblok/react/rsc";
 import Image from "next/image";
 
 const Sectie = ({ blok }) => {
@@ -28,7 +28,12 @@ const Sectie = ({ blok }) => {
                     <div className="container">
                         {blok.title && <h2>{blok.title}</h2>}
                         {blok.description && (
-                            <div className="richtext" dangerouslySetInnerHTML={{ __html: blok.description }} />
+                            <div
+                                className="richtext"
+                                dangerouslySetInnerHTML={{
+                                    __html: renderRichText(blok.description),
+                                }}
+                            />
                         )}
                         {blok.extra_title && <h2>{blok.extra_title}</h2>}
                         {blok.show_line && <div className="line2"></div>}
