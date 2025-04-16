@@ -4,7 +4,7 @@ import {
   storyblokInit,
   apiPlugin,
 } from "@storyblok/react";
-import type { SbReactComponentsMap } from "@storyblok/react/dist/types/components";
+import type { SbReactComponentsMap } from "@storyblok/react";
 import Page from "./page.component";
 import Feature from "./Feature/Feature";
 import ThreeQuarterLayout from "./ThreeQuarterLayout/ThreeQuarterLayout";

@@ -8,13 +8,13 @@ type Blok = {
 
 type PageProps = {
   blok: {
-    body: Blok[];
+    body?: Blok[];
   };
 };
 
 const Page: React.FC<PageProps> = ({ blok }) => (
   <main {...storyblokEditable(blok)}>
-    {blok.body.map((nestedBlok) => (
+    {blok.body?.map((nestedBlok) => (
       // eslint-disable-next-line
       <StoryblokComponent blok={nestedBlok} key={nestedBlok._uid} />
     ))}
