@@ -4,12 +4,9 @@ import Image from "next/image";
 const AboutSection = ({ blok }) => {
     // Debug logs voor alle elementen
     console.log('About blok:', blok);
-    console.log('Title:', blok.title);
-    console.log('Description:', blok.description);
-    console.log('Extra title:', blok.extra_title);
-    console.log('Checklist:', blok.checklist);
-    console.log('Button text:', blok.button_text);
     console.log('Selfie image:', blok.selfie_image);
+    console.log('Selfie image filename:', blok.selfie_image?.filename);
+    console.log('Selfie image exists:', !!blok.selfie_image?.filename);
 
     // Render de rich text zonder extra p tags
     const renderedDescription = blok.description
@@ -55,16 +52,22 @@ const AboutSection = ({ blok }) => {
                         {blok.button_text}
                     </button>
                 )}
+                {blok.button_text2 && (
+                    <button className="buttondefault">
+                        {blok.button_text}
+                    </button>
+                )}
             </div>
-            {blok.selfie_image?.filename && (
+            {blok.selfie_image?.filename ? (
                 <Image
                     className="selfie"
                     src={blok.selfie_image.filename}
-                    alt="selfie"
+                    alt={blok.selfie_image.alt || "selfie"}
                     width={500}
                     height={500}
                 />
-            )}
+            ) : null}
+
         </div>
     );
 };

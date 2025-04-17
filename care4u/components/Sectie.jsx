@@ -60,12 +60,21 @@ const Sectie = ({ blok }) => {
                                 {blok.button_text}
                             </button>
                         )}
+                        {blok.button_text2 && (
+                            <button className="buttondefault">
+                                {blok.button_text2}
+                            </button>
+                        )}
+
                     </div>
-                    {blok.side_image?.filename && (
+                    {console.log('Side image:', blok.side_image)}
+                    {console.log('Side image filename:', blok.side_image?.filename)}
+                    {console.log('Side image exists:', !!blok.side_image?.filename)}
+                    {blok.image?.filename && (
                         <Image
                             className="selfie"
-                            src={blok.side_image.filename}
-                            alt={blok.side_image.alt || "Side image"}
+                            src={blok.image.filename}
+                            alt={blok.image.alt || 'Afbeelding'}
                             width={500}
                             height={500}
                         />

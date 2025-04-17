@@ -44,18 +44,9 @@ const Hero = ({ blok }) => {
                     </div>
                 </div>
             </div>
-            {imageUrl && (
-                <div className="absolute top-0 left-0 w-full h-full">
-                    <Image
-                        src={imageUrl}
-                        alt={blok.background_image?.alt || "Hero background"}
-                        fill
-                        className="object-cover"
-                        priority
-                        unoptimized={true}
-                    />
-                </div>
-            )}
+
+
+
         </div>
     );
 };
