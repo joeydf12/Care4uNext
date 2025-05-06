@@ -4,7 +4,7 @@ import {
   storyblokInit,
   apiPlugin,
 } from "@storyblok/react";
-// import type { SbReactComponentsMap } from "@storyblok/react/dist/types/components";
+import type { SbReactComponentsMap } from "@storyblok/react/dist/types/components";
 import Page from "./page.component";
 import Feature from "./Feature/Feature";
 import ThreeQuarterLayout from "./ThreeQuarterLayout/ThreeQuarterLayout";
@@ -40,7 +40,7 @@ const components = {
 storyblokInit({
   accessToken: "Qwz006v8zvdDr6ue2K3kXgtt",
   use: [apiPlugin],
-  // components: components as SbReactComponentsMap,
+  components: components as SbReactComponentsMap,
 });
 
 
