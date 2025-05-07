@@ -1,4 +1,5 @@
 # Care4uNext
+[![Next.js](https://img.shields.io/badge/Next.js-black?logo=next.js&logoColor=white)]
 
 Een moderne healthcare platform gebouwd met Next.js, TypeScript en Tailwind CSS.
 
