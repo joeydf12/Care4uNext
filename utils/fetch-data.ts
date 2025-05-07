@@ -28,7 +28,7 @@ async function fetchData(slug?: string): Promise<FetchDataResult> {
       `cdn/stories${slug ? `/${slug}` : ""}`,
       sbParams,
       {
-        cache: "no-store",
+        next: { revalidate: 60 } // Cache for 60 seconds with ISR
       }
     );
     console.log(sbParams);
