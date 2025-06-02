@@ -21,7 +21,6 @@
 * {
     margin: 0;
     padding: 0;
-
 }
 
 /* ---------------------------- main ---------------  */
@@ -32,7 +31,6 @@
 }
 
 .sectie1 {
-
     background-size: cover;
     background-position: center;
     height: 60vh;
@@ -70,9 +68,6 @@
     background-color: #8F7554;
     color: white;
 }
-
-
-
 
 /* ---------------------- block section ---------------- */
 
@@ -124,7 +119,6 @@
     margin-bottom: 1rem;
     line-height: 1.6;
     display: flex;
-
 }
 
 .sectie2 p2 {
@@ -141,13 +135,11 @@
 }
 
 .sectie2 ul li {
-
     align-items: center;
     margin-bottom: 0.5rem;
 }
 
 .sectie2 ul li::before {
-
     color: #5f4634;
     font-weight: bold;
     margin-right: 0.5rem;
@@ -165,7 +157,6 @@
     text-decoration: none;
 }
 
-
 .sectie2 button:hover {
     background-color: #8F7554;
     color: white;
@@ -174,7 +165,6 @@
 .titel {
     width: 100vw;
     height: 10vh;
-
     justify-content: center;
     align-items: center;
 }
@@ -195,7 +185,6 @@
     justify-content: center;
 }
 
-
 .blok1,
 .blok2,
 .blok3,
@@ -213,9 +202,7 @@
     flex-direction: column;
     font-size: 20px;
     color: #8F7554;
-
 }
-
 
 .blok1:hover,
 .blok2:hover,
@@ -232,7 +219,6 @@
     color: white;
 }
 
-
 .blok11,
 .blok22,
 .blok33,
@@ -248,63 +234,6 @@
 
 .socialicon {
     width: 50%;
-    height: auto;
-    display: block;
-}
-
-.blok1 p,
-.blok2 p,
-.blok3 p,
-.blok4 p {
-    margin-top: 8%;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-
-
-
-}
-
-
-.sectie3 {
-    background-color: #f9f4f0;
-
-    height: 30vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.blok1:hover .socialicon {
-    content: url('/Images/whatsapp-svgrepo-com (wit).svg');
-}
-
-.blok2:hover .socialicon {
-    content: url('/Images/mail-svgrepo-com (wit).svg');
-}
-
-.blok3:hover .socialicon {
-    content: url('/Images/facebook-svgrepo-com (wit).svg');
-}
-
-.blok4:hover .socialicon {
-    content: url('/Images/instagram-svgrepo-com (wit).svg');
-}
-
-.line {
-    width: 100%;
-    height: 1px;
-    background: #8F7554;
-    margin-bottom: 3%;
-    margin-top: -1%;
-}
-
-.line2 {
-    width: 100%;
-    height: 1px;
-    background: #8F7554;
-    margin-bottom: 3%;
 }
 
 @media (max-width: 768px) {
@@ -313,120 +242,96 @@
     }
 
     .sectie2 .container {
-        width: 70vw;
-
+        width: 90vw;
     }
 
     .sectie2 p {
-        font-size: 13px;
+        flex-direction: column;
     }
 
     .sectie2 h2 {
-        font-size: 25px;
+        font-size: 1.5rem;
     }
 
     .sectie2 .container ul {
-        display: flex;
         flex-direction: column;
         align-items: flex-start;
-        justify-content: center;
-        align-self: center;
     }
 
     .sectie2product {
-        margin-bottom: 20%;
+        flex-direction: column;
     }
 
     .done {
-        width: 8vw !important;
-
+        flex-direction: column;
     }
 
     .selfie {
-        margin-left: 0% !important;
-        z-index: 1;
-        width: 70vw;
-        height: 100%;
-        margin-top: 10px;
-        border-radius: 5% !important;
+        width: 100%;
+        margin-left: 0 !important;
+        margin-bottom: 1rem;
     }
 
     .bloks {
-        overflow-x: scroll;
-        display: flex;
+        flex-direction: column;
         width: 100%;
-        scroll-snap-type: x mandatory;
-        /* Optioneel, zorgt ervoor dat het scrollen soepel verloopt */
-        -webkit-overflow-scrolling: touch;
-        /* Zorgt voor soepel scrollen op mobiele apparaten */
-        gap: 1rem;
-        margin-left: 10%;
-        margin-right: 10%;
     }
 
     .blok1,
     .blok2,
     .blok3,
     .blok4 {
-        flex: 0 0 auto;
-        /* Zorgt ervoor dat elk blok naast elkaar staat */
-        width: 60vw;
-        /* Zorgt ervoor dat elk blok ongeveer 80% van de viewport breed is */
-        height: 20vh;
-        /* Zorgt ervoor dat de hoogte consistent blijft */
-        background-color: white;
-        margin: 2%;
-        /* Voegt wat ruimte toe tussen de blokken */
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 20px;
-        color: #8F7554;
-        scroll-snap-align: start;
+        width: 90%;
+        margin: 1rem auto;
     }
 
     .socialicon {
-        width: 100%;
+        width: 30%;
     }
 
     .blok11,
     .blok22,
     .blok33,
     .blok44 {
-        width: 15vw;
+        width: 30%;
     }
 }
 
-/* Behandeling stijlen */
 .behandelingsectie1 {
-    padding: 2rem;
-    text-align: center;
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    color: #8F7554;
+    margin-left: 5vw;
 }
 
 .behandelingsectie1 .content1 {
-    max-width: 800px;
-    margin: 0 auto;
+    max-width: 600px;
 }
 
 .behandelingsectie1 h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-bottom: 1rem;
 }
 
 .behandelingsectie1 p {
-    font-size: 1.1rem;
-    line-height: 1.6;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
 }
 
 .sectie2 {
+    background-color: #f9f4f0;
     padding: 2rem;
 }
 
 .blokken {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
@@ -434,31 +339,29 @@
 
 .blok1,
 .blok2,
-.blok3 {
-    background: white;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.blok3,
+.blok4 {
+    flex: 1 1 300px;
+    max-width: 400px;
 }
 
 .image {
-    position: relative;
-    height: 200px;
+    width: 100%;
+    height: auto;
 }
 
 .informatie {
-    padding: 1.5rem;
+    padding: 1rem;
 }
 
 .informatie h2 {
     font-size: 1.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .informatie p {
     font-size: 1rem;
     line-height: 1.5;
-    color: #666;
 }
 
 .absolute top-0 left-0 w-full h-full {
@@ -467,11 +370,16 @@
     left: 0;
     width: 100%;
     height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .background {
     background-image: url('/Images/background2.png');
     background-size: cover;
+    background-position: center;
 }
 
 .sectie1 {
@@ -484,13 +392,12 @@
     text-align: left;
     color: #8F7554;
     margin-left: 5vw;
-    width: 100vw;
 }
 
 .homeblokheadline {
-
-    font-size: 3rem;
-    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
 }
 
 .homebloksubheadline {

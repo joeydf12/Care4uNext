@@ -14,10 +14,9 @@ let nextConfig = {
       rule.use.forEach((moduleLoader) => {
         if (/css-loader[/\\](?:cjs|dist|src)/.test(moduleLoader.loader)) {
           if (typeof moduleLoader.options.modules === 'object') {
-            // eslint-disable-next-line no-param-reassign
             moduleLoader.options.modules = {
               ...moduleLoader.options.modules,
-              exportLocalsConvention: 'camelCase' // https://github.com/webpack-contrib/css-loader#exportlocalsconvention
+              exportLocalsConvention: 'camelCase'
             };
           }
         }
@@ -39,10 +38,11 @@ let nextConfig = {
       }
     ]
   },
-  // Enables scroll restoration when you go back to previous page
   experimental: {
     scrollRestoration: true
-  }
+  },
+  optimizeFonts: true,
+  poweredByHeader: false
 };
 
 // Check if ANALYZE env is set en if true start bundle-analyzer
