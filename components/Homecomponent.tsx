@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Image from "next/image";
-import "../app/globals.css";
+import "/public/globals.css";
 import Script from 'next/script';
 
 export default function Home() {

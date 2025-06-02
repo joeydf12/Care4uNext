@@ -6,6 +6,11 @@
 
 @layer utilities {}
 
+* {
+    margin: 0;
+    padding: 0;
+}
+
 .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -18,16 +23,12 @@
     border-radius: 0.5rem;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-}
-
 /* ---------------------------- main ---------------  */
 
 .background {
     background-image: url('/Images/background2.png');
     background-size: cover;
+    background-position: center;
 }
 
 .sectie1 {
@@ -40,6 +41,7 @@
     text-align: left;
     color: #8F7554;
     margin-left: 5vw;
+    width: 100vw;
 }
 
 .content1 h1 {
@@ -69,11 +71,11 @@
     color: white;
 }
 
-/* ---------------------- block section ---------------- */
+/* ---------------------- sectie2 ---------------- */
 
 .sectie2 {
     background-color: #f9f4f0;
-    padding: 1rem;
+    padding: 2rem;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -83,31 +85,19 @@
 
 .sectie2 .container {
     max-width: 800px;
-    width: 50vw;
+    width: 90vw;
     background-color: white;
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-top: 5px solid #8F7554;
+    z-index: 2;
 }
 
 .sectie2 .container ul {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
-    align-self: center;
-}
-
-.container {
-    z-index: 2;
-}
-
-.selfie {
-    display: flex;
-    margin-left: -5% !important;
-    z-index: 1;
-    width: 30vw;
 }
 
 .sectie2 h2 {
@@ -115,16 +105,14 @@
     margin-bottom: 1rem;
 }
 
-.sectie2 p {
+.sectie2 p,
+.p2 {
     margin-bottom: 1rem;
     line-height: 1.6;
     display: flex;
 }
 
-.sectie2 p2 {
-    margin-bottom: 1rem;
-    line-height: 1.6;
-    display: flex;
+.p2 {
     margin-left: 25px;
 }
 
@@ -135,18 +123,10 @@
 }
 
 .sectie2 ul li {
-    align-items: center;
     margin-bottom: 0.5rem;
 }
 
-.sectie2 ul li::before {
-    color: #5f4634;
-    font-weight: bold;
-    margin-right: 0.5rem;
-}
-
 .sectie2 button {
-    padding: 0.75rem 1.5rem;
     padding: 0.75rem 1.5rem;
     background-color: transparent;
     border: 1px solid #8F7554;
@@ -154,7 +134,6 @@
     font-size: 1rem;
     cursor: pointer;
     border-radius: 10px;
-    text-decoration: none;
 }
 
 .sectie2 button:hover {
@@ -162,12 +141,22 @@
     color: white;
 }
 
+.selfie {
+    display: flex;
+    margin-left: -5%;
+    z-index: 1;
+    width: 30vw;
+}
+
 .titel {
     width: 100vw;
     height: 10vh;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
+
+/* ---------------------- blokken ---------------- */
 
 .bloks {
     display: flex;
@@ -177,12 +166,11 @@
 .bloks a {
     text-decoration: none;
     color: inherit;
-    display: block;
-    width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 100%;
+    height: 100%;
 }
 
 .blok1,
@@ -191,7 +179,6 @@
 .blok4 {
     display: flex;
     justify-content: center;
-    align-self: center;
     align-items: center;
     height: 20vh;
     width: 20vw;
@@ -228,14 +215,65 @@
     align-items: center;
     height: 10vh;
     width: 10vw;
-    align-self: center;
     border-radius: 5px;
 }
 
 .socialicon {
     width: 50%;
+    height: auto;
+    display: block;
 }
 
+.blok1 p,
+.blok2 p,
+.blok3 p,
+.blok4 p {
+    margin-top: 8%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+/* sectie3 */
+.sectie3 {
+    background-color: #f9f4f0;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* icon hovers */
+.blok1:hover .socialicon {
+    content: url('/Images/whatsapp-svgrepo-com (wit).svg');
+}
+
+.blok2:hover .socialicon {
+    content: url('/Images/mail-svgrepo-com (wit).svg');
+}
+
+.blok3:hover .socialicon {
+    content: url('/Images/facebook-svgrepo-com (wit).svg');
+}
+
+.blok4:hover .socialicon {
+    content: url('/Images/instagram-svgrepo-com (wit).svg');
+}
+
+/* lijnen */
+.line,
+.line2 {
+    width: 100%;
+    height: 1px;
+    background: #8F7554;
+    margin-bottom: 3%;
+}
+
+.line {
+    margin-top: -1%;
+}
+
+/* responsive */
 @media (max-width: 768px) {
     .sectie2 {
         flex-direction: column;
@@ -246,6 +284,7 @@
     }
 
     .sectie2 p {
+        font-size: 13px;
         flex-direction: column;
     }
 
@@ -253,36 +292,33 @@
         font-size: 1.5rem;
     }
 
-    .sectie2 .container ul {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .sectie2product {
-        flex-direction: column;
-    }
-
-    .done {
-        flex-direction: column;
-    }
-
     .selfie {
         width: 100%;
         margin-left: 0 !important;
         margin-bottom: 1rem;
+        border-radius: 5% !important;
     }
 
     .bloks {
+        overflow-x: scroll;
         flex-direction: column;
         width: 100%;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        gap: 1rem;
+        margin-left: 10%;
+        margin-right: 10%;
     }
 
     .blok1,
     .blok2,
     .blok3,
     .blok4 {
+        flex: 0 0 auto;
         width: 90%;
+        height: 20vh;
         margin: 1rem auto;
+        scroll-snap-align: start;
     }
 
     .socialicon {
@@ -297,7 +333,11 @@
     }
 }
 
+/* ---------------------- behandeling sectie ---------------- */
+
 .behandelingsectie1 {
+    padding: 2rem;
+    text-align: center;
     background-size: cover;
     background-position: center;
     height: 60vh;
@@ -311,6 +351,7 @@
 
 .behandelingsectie1 .content1 {
     max-width: 600px;
+    margin: 0 auto;
 }
 
 .behandelingsectie1 h1 {
@@ -320,12 +361,8 @@
 
 .behandelingsectie1 p {
     font-size: 1.2rem;
+    line-height: 1.6;
     margin-bottom: 0.5rem;
-}
-
-.sectie2 {
-    background-color: #f9f4f0;
-    padding: 2rem;
 }
 
 .blokken {
@@ -362,9 +399,10 @@
 .informatie p {
     font-size: 1rem;
     line-height: 1.5;
+    color: #666;
 }
 
-.absolute top-0 left-0 w-full h-full {
+.absolute-overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -376,24 +414,6 @@
     align-items: center;
 }
 
-.background {
-    background-image: url('/Images/background2.png');
-    background-size: cover;
-    background-position: center;
-}
-
-.sectie1 {
-    background-size: cover;
-    background-position: center;
-    height: 60vh;
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    text-align: left;
-    color: #8F7554;
-    margin-left: 5vw;
-}
-
 .homeblokheadline {
     font-size: 2rem;
     font-weight: bold;
@@ -402,21 +422,4 @@
 
 .homebloksubheadline {
     font-size: 1.2rem;
-}
-
-.buttondefault {
-    margin-top: 1rem;
-    padding: 0.75rem 1.5rem;
-    background-color: transparent;
-    border: 1px solid #8F7554;
-    color: #8F7554;
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 10px;
-    text-decoration: none;
-}
-
-.buttondefault:hover {
-    background-color: #8F7554;
-    color: white;
 }
