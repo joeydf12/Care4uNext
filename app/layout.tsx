@@ -1,4 +1,4 @@
-import "/public/globals.css";
+import "./globals.css";
 import { storyblokInit, apiPlugin } from "@storyblok/react/rsc";
 import StoryblokProvider from "../components/StoryblokProvider";
 import Navigation from "../components/header/Navigation";
