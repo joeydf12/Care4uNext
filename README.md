@@ -1,113 +1,107 @@
-# Care4uNext
-[![Next.js](https://img.shields.io/badge/Next.js-black?logo=next.js&logoColor=white)]
+Care4uNext 🏥
+Care4uNext is een modern healthcare platform, gebouwd met Next.js, TypeScript, en Tailwind CSS. Dit platform richt zich op het bieden van een gebruiksvriendelijke ervaring voor zorggerelateerde toepassingen, met focus op schaalbaarheid, typeveiligheid en internationale toegankelijkheid.
 
-Een moderne healthcare platform gebouwd met Next.js, TypeScript en Tailwind CSS.
+Foto
+![project-image](public/Images/foto1.png)
+![project-image](public/Images/foto2.png)
+![project-image](public/Images/foto3.png)
 
-## 🚀 Features
 
-- Modern React met Next.js 14
-- TypeScript voor type veiligheid
-- Tailwind CSS voor styling
-- Internationalisatie ondersteuning (i18n)
-- Storyblok CMS integratie
-- Google Cloud integratie voor logging en error reporting
-- Progress bar voor betere gebruikerservaring
-- Datum verwerking met date-fns en Luxon
-- Responsive design
 
-## ⚙️ Systeem Vereisten
+🛠️ Gebruikte Technologieën
+📂 Projectstructuur
+Hieronder vind je de mappenstructuur van het project:
 
-- Node.js 18.17 of hoger
-- npm 9.0.0 of hoger
+Bash
 
-## 🛠️ Tech Stack
+care4unext/
+├── app/               # Next.js app directory
+├── components/        # Herbruikbare React components
+├── public/            # Statische assets
+├── utils/             # Utility functies
+├── app-state/         # Applicatie state management
+├── certificates/      # Lokale SSL certificaten (niet gecommit)
+├── .env.local         # Lokale omgevingsvariabelen (niet gecommit)
+├── next.config.js     # Next.js configuratie
+├── tailwind.config.js # Tailwind CSS configuratie
+├── tsconfig.json      # TypeScript configuratie
+├── i18nConfig.js      # Internationalisatie configuratie
+├── package.json       # Dependencies en scripts
+└── README.md          # Documentatie
+🚀 Functionaliteiten
+Kernfunctionaliteiten:
+Modern React met Next.js 14: Profiteert van de nieuwste Next.js-features voor server-side rendering, routing en API-routes.
+TypeScript voor type veiligheid: Zorgt voor robuuste code en betere ontwikkelervaring door statische typering.
+Tailwind CSS voor styling: Maakt snelle en responsieve UI-ontwikkeling mogelijk met utility-first CSS.
+Internationalisatie ondersteuning (i18n): Klaar voor meertalige content met i18nConfig.js.
+Storyblok CMS integratie: Flexibel contentbeheer via een headless CMS.
+Google Cloud integratie: Voor geavanceerde logging en error reporting.
+Progress bar: Verbetert de gebruikerservaring tijdens het laden van pagina's.
+Datum verwerking: Efficiënte datummanipulatie met date-fns en Luxon.
+Responsive design: Geoptimaliseerd voor diverse schermgroottes, van mobiel tot desktop.
+📦 Installatie
+Systeem Vereisten
+Node.js 18.17 of hoger
+npm 9.0.0 of hoger
+Installatie-instructies
+Clone de repository:
 
-- **Framework:** Next.js 14
-- **Programmeertaal:** TypeScript
-- **Styling:** Tailwind CSS
-- **CMS:** Storyblok
-- **State Management:** React Hooks
-- **Datum Verwerking:** date-fns, Luxon
-- **Cloud Services:** Google Cloud (Logging & Error Reporting)
-- **Development Tools:** ESLint, Prettier, TypeScript
+Bash
 
-## 📦 Installatie
+git clone [jouw-repository-url]
+cd care4unext
+Installeer dependencies:
 
-1. Clone de repository:
-```bash
-git clone [repository-url]
-```
+Bash
 
-2. Installeer dependencies:
-```bash
 npm install
-```
+Configureer Omgevingsvariabelen:
+Maak een bestand genaamd .env.local aan in de root directory en voeg je Storyblok API tokens toe:
 
-3. Maak een `.env.local` bestand aan in de root directory en voeg je environment variables toe:
-```env
+Codefragment
+
 # Storyblok tokens
 STORYBLOK_API_TOKEN=your_preview_token
 NEXT_PUBLIC_STORYBLOK_API_TOKEN=your_public_token
+Belangrijke Notities:
 
+npm run dev geeft je een lokaal SSL-certificaat voor localhost. Sta dit alstublieft toe. Dit is nodig voor de visuele live editor van Storyblok.
+Er is geen .env.local of .env in deze repository, omdat ze in .gitignore staan. Je moet ze zelf aanmaken en de access tokens toevoegen.
+Gebruik de preview token voor .env.local (voor lokale ontwikkeling).
+Gebruik de public token voor .env bij deployment (bijvoorbeeld op Vercel, configureer dit in de Vercel project settings).
+Start de ontwikkelserver:
 
-## 🚀 Development
+Bash
 
-Om de development server te starten:
-
-```bash
 npm run dev
-```
+Open de applicatie in je browser op https://localhost:3000.
 
-De applicatie zal beschikbaar zijn op `https://localhost:3000`
-
-### Belangrijke Notities
-* `npm run dev` geeft je een lokale SSL certificaat voor localhost - sta dit alstublieft toe. Dit is nodig voor Storyblok's visual live editor om te werken.
-* Er is geen `.env.local` of `.env` in deze repository omdat ze in .gitignore staan. Je moet ze zelf aanmaken en het access token toevoegen:
-  - Gebruik de preview token voor `.env.local`
-  - Gebruik de public token voor `.env` bij deployment
-
-## 📝 Beschikbare Scripts
-
-- `npm run dev` - Start development server
-- `npm run build` - Build voor productie
-- `npm run start` - Start productie server
-- `npm run lint` - Run ESLint
-- `npm run ts-compile` - TypeScript type checking
-- `npm run analyze` - Analyseer bundle grootte
-
-## 🏗️ Project Structuur
-├── app/ # Next.js app directory
-├── components/ # Herbruikbare React components
-├── public/ # Statische assets
-├── utils/ # Utility functies
-├── app-state/ # Applicatie state management
-└── certificates/ # SSL certificaten
-
-
-## 🔧 Configuratie
-
-Het project gebruikt verschillende configuratie bestanden:
-
-- `next.config.js` - Next.js configuratie
-- `tailwind.config.js` - Tailwind CSS configuratie
-- `tsconfig.json` - TypeScript configuratie
-- `i18nConfig.js` - Internationalisatie configuratie
-
-## 🚀 Deployment
-
+⚙️ Beschikbare Scripts
+npm run dev - Start development server
+npm run build - Build voor productie
+npm run start - Start productie server
+npm run lint - Run ESLint
+npm run ts-compile - TypeScript type checking
+npm run analyze - Analyseer bundle grootte
+🚀 Deployment
 Dit project is geconfigureerd voor deployment op Vercel. De deployment kan worden uitgevoerd via:
 
-1. GitHub integratie met Vercel
-2. Vercel CLI:
-```bash
+GitHub integratie met Vercel (aanbevolen voor geautomatiseerde deployments).
+Vercel CLI:
+Bash
+
 npm i -g vercel
 vercel
-```
+Zorg ervoor dat je de juiste environment variables hebt geconfigureerd in je Vercel project settings (bijv. STORYBLOK_API_TOKEN, NEXT_PUBLIC_STORYBLOK_API_TOKEN).
+🔧 Configuratiebestanden
+Het project maakt gebruik van de volgende configuratiebestanden:
 
-Zorg ervoor dat je de juiste environment variables hebt geconfigureerd in je Vercel project settings.
+next.config.js - Next.js configuratie
+tailwind.config.js - Tailwind CSS configuratie
+tsconfig.json - TypeScript configuratie
+i18nConfig.js - Internationalisatie configuratie
+✨ Bijdragen
+Voel je vrij om bij te dragen aan dit project! Open een pull request of rapporteer een issue.
 
-
-
-
-
-
+📄 Licentie
+Dit project valt onder de MIT-licentie.
