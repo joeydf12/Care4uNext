@@ -1,5 +1,11 @@
 # Care4uNext 🏥
 
+[![Next.js](https://img.shields.io/badge/Next.js-14-black?logo=next.js&logoColor=white)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.3-38B2AC?logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![Node.js](https://img.shields.io/badge/Node.js-18.17-green?logo=node.js&logoColor=white)](https://nodejs.org/)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 **Care4uNext** is een modern healthcare-platform gebouwd met **Next.js 14**, **TypeScript**, en **Tailwind CSS**. Het richt zich op een gebruiksvriendelijke ervaring voor zorgtoepassingen, met nadruk op schaalbaarheid, typeveiligheid en internationale toegankelijkheid.
 
 ---
